@@ -1,0 +1,20 @@
+{
+  "sections" : [
+    {
+      "type" : "plain",
+      "contents" : "# Задача 1\n## Условие\nНайдите предел последовательности $$ \\{a_n\\}_{n=1}^{\\infty} $$, где $$ \\{a_n\\} = |\\sin(\\pi\\sqrt[3]{n^3+n^2})| $$\n\n## Решение\n* $$ |\\sin(\\pi\\sqrt[3]{n^3+n^2})| =  |\\sin(\\pi\\sqrt[3]{n^3+n^2} - \\pi{n} + \\pi{n})| $$ \n$$= |\\pm\\sin(\\pi\\sqrt[3]{n^3+n^2} - \\pi{n})| = |\\sin(\\pi\\sqrt[3]{n^3+n^2} - \\pi{n})|$$\n$$= |\\sin\\left(\\pi(\\sqrt[3]{n^3+n^2} - n)\\right)|$$\nпотому что $$ |\\sin(x + \\pi{n})| = |\\pm\\sin(x)| = |sin(x)|$$\n* Используя формулу Тейлора для функции $$ \\sqrt[3](1 + x)$$, выражение под синусом можно записать в следующем виде: \n$$ \\sqrt[3]{n^3 + n^2} - n = n \\left(\\sqrt[3]{1 + \\frac{1}{n}} - 1\\right) $$ \n$$= n \\left(1 + \\frac{1}{3n} + o\\left(\\frac{1}{n}\\right) - 1\\right) = \\frac{1}{3} + o\\left(1\\right)$$\n* Подставим результат в исходное выражение:\n$$ \\lim_{n \\to \\infty} a_n = \\lim_{n \\to \\infty} |\\sin\\left(\\pi\\left(\\frac{1}{3} + o(1)\\right)\\right)| = \\sin\\left(\\frac{\\pi}{3}\\right) = \\frac{\\sqrt{3}}{2}$$\n\n**Ответ**: $$ \\frac{\\sqrt{3}}{2} $$"
+    }
+  ],
+  "metadata" : {
+    "leftMargin" : 2,
+    "bottomMargin" : 2,
+    "pageSize" : 0,
+    "rightMargin" : 2,
+    "indentStyle" : "tabs",
+    "pageNumberingEnabled" : false,
+    "indentWidth" : 4,
+    "writingDirection" : -1,
+    "topMargin" : 2,
+    "previewStyle" : "preview_modern"
+  }
+}
